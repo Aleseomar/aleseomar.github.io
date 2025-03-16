@@ -78,38 +78,61 @@ Una vez conectados dice que ejecutemos el comando `getsystem` y comporbemos que 
 Nos dicen que ejecutemos una shell y ejecutemos whoami para ver si somos el sistema. 
 ![95c366bc0bf932b57bb5768c41a1da39.png](img/95c366bc0bf932b57bb5768c41a1da39.png)
 
-Una vez ejecutado dejamos eso en segundo plano y nos dice que listemos los procesos con `ps` y elijamos uno de los del final que esten ejecutandose por nuestro usuario  NT AUTHORITY\SYSTEM. 
 
-![dafc9f8ab1cacd1d8656ff16791d984b.png](img/dafc9f8ab1cacd1d8656ff16791d984b.png)
-
-Nosotros hemos escogido este proceso ` 2664  692   SearchIndexer.exe     x64   0        NT AUTHORITY\SYSTEM
-`
-![31d500c31b3192086a431f0821d6d02d.png](img/31d500c31b3192086a431f0821d6d02d.png)
-
+Con permisos del sistema podemos ejecutar el comando hashdump. Vemos que nos sale el usuario Jon creado. 
 ![bcf3f49bba92789ffa7bcc07d7934181.png](img/bcf3f49bba92789ffa7bcc07d7934181.png)
 
+Podemos probar a descifrar la contraseña. 
 ![36d5a20590303be23519a4bb9aa1c03f.png](img/36d5a20590303be23519a4bb9aa1c03f.png)
 
+La cogeremos y con `hashid` identificaremos en que esta hasheada la contraseña. 
 
 ![42dd70cc333735dd6f7b56040b291873.png](img/42dd70cc333735dd6f7b56040b291873.png)
 
+Probamos a desencriptar con los diferentes formatos de hash con John Ripper. Y tenemos que la contraseña es **alqfna22**. 
+
 ![2f412fa79376d3a08708a573ae5b6530.png](img/2f412fa79376d3a08708a573ae5b6530.png)
+
+Por último nos tenemos que encontrar la 3 flag, por lo que buscaremos en los directorios de la máquina.
+
+La primera nos dicen que se encuentra en la raiz del sistema. Vemos el fichero **flag1.txt**. 
 
 ![7883652fb2821a4bc7c8b3fb220d1c28.png](img/7883652fb2821a4bc7c8b3fb220d1c28.png)
 
+Vamos a ver que hay dentro del fichero y encontramos la primera flag. 
+
+
 ![f17896d7822e478519704d76cfc04008.png](img/f17896d7822e478519704d76cfc04008.png)
 
+La segunda flag nos dicen que se encuentra en un sitio nos dicen que está en una carpeta de configuración de Windows. Por lo que nos metemos en System32 y haremos un grep a ver si encontramos el fichero. 
 
 ![4c6bb213e3fc60441922e111a1a7a9f8.png](img/4c6bb213e3fc60441922e111a1a7a9f8.png)
+
+Una vez encontrado miraremos el contenido del mismo. 
+
 ![63166f4f009099274a3281e371037ec5.png](img/63166f4f009099274a3281e371037ec5.png)
 
+Nos dicen que esta en una carpeta de uno de los administradores del sistema. Jon es el único usuario creado por lo que pensamos que es el usuario que se creo en la instalación del SO y por lo tanto es el que tiene permisos de administrador. 
 
 ![e408dec05601a955d3ead174d76bcc34.png](img/e408dec05601a955d3ead174d76bcc34.png)
+
+Entramos en us carpeta y listamos sus directorios. 
+
 ![4e76901c5a1afc08ae45533b2063d7a4.png](img/4e76901c5a1afc08ae45533b2063d7a4.png)
 
+
+Vamos mirando en Downloads a ver si vemos algo pero no hay nada.
+
 ![79221162a03808ec152532d870a27a7c.png](img/79221162a03808ec152532d870a27a7c.png)
+
+Podemos ver como dentro de Documents hay un archivo flag3.txt
 ![e10a07190ab60cfa5fcaf0c5ea429645.png](img/e10a07190ab60cfa5fcaf0c5ea429645.png)
+
+Vamos a listar el contenido del fichero y localizamos la tercera flag. 
+
 ![6441ed9c47df7f55e15abdc9eb61e62d.png](img/6441ed9c47df7f55e15abdc9eb61e62d.png)
-flag{access_the_machine}
-flag{sam_database_elevated_access}
-flag{admin_documents_can_be_valuable}
+
+
+1. flag{access_the_machine}
+2. flag{sam_database_elevated_access}
+3. flag{admin_documents_can_be_valuable}
