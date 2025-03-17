@@ -52,15 +52,18 @@ Y ya estamos dentro de la máquina.
 
 Vemos que hay un archivo user.txt en el escritorio donde encontramos una flag. 
 
-![32c40b4554d857f7e7eeffbe39be8939.png](img/32c40b4554d857f7e7eeffbe39be8939.png)
+![32c40b4554d857f7e7eeffbe39be8939.png](img/32c40b4554d857f7e7eeffbe39be8939.png)  
+
 Flag: THM{HACK_PLAYER_ONE}
 
-Nos dicen que encontremos el CVE que ha buscado el usuario en el historial de explorer. Al parecer no se si es un bug o algo pero no nos aparece nada ni en el histroial ni en los archivos del historial. 
+Nos dicen que encontremos el CVE que ha buscado el usuario en el historial de explorer. Al parecer no se si es un bug o algo pero no nos aparece nada ni en el histroial ni en los archivos del historial.
 
-En THM nos dicen la solución por lo que vamos a coger la respuesta de ahí. 
+En THM nos dicen la solución por lo que vamos a coger la respuesta de ahí.
+
 ![32ee56174df60734ad5d8b0181994783.png](img/32ee56174df60734ad5d8b0181994783.png)
 
 ![9e1c804f0577ba64acb8d5f7e41d0e5e.png](img/9e1c804f0577ba64acb8d5f7e41d0e5e.png)
+
 CVE-2019-1388
 
 En el escritorio vemos un archivo hhupd. En THM nos dan un vieo con el que ejecutar un exploit.  
@@ -68,7 +71,6 @@ En el escritorio vemos un archivo hhupd. En THM nos dan un vieo con el que ejecu
 ![29ead192c71b94c7ddf9006fd0f0d94f.png](img/29ead192c71b94c7ddf9006fd0f0d94f.png)
 
 Video: https://www.youtube.com/watch?v=3BQKpPNlTSo
-
 
 Ejecutamos el script y le damos a "Show more details"
 ![a29b253216d064e5c470b785c20df612.png](img/a29b253216d064e5c470b785c20df612.png)
@@ -112,11 +114,14 @@ Ahora nos dicen que busquemos la flag en de root.txt del directorio en la carpet
 
 ![f2fe5ff16f63b72cb8d3c7fbc91f6e11.png](img/f2fe5ff16f63b72cb8d3c7fbc91f6e11.png)
 
-En el directorio Desktop vemos el archivo que se nos menciona. 
+En el directorio Desktop vemos el archivo que se nos menciona.
+
 ![1f45b8c1106ddfce11ae5c6d6d97d7ea.png](img/1f45b8c1106ddfce11ae5c6d6d97d7ea.png)
 
 Vemos el contenido del fichero para encontrar la flag.
+
 ![bb0cfb26db388c1aaaf6a150a1e74498.png](img/bb0cfb26db388c1aaaf6a150a1e74498.png)
+
 Flag: THM{COIN_OPERATED_EXPLOITATION}
 
 Nos dicen que no cerremos la sesión de la consola. Nos proporcionan el siguiente exploit `exploit/multi/script/web_delivery`, así que lo buscaremos en metaexploit. 
@@ -132,6 +137,7 @@ Vemos las opciones de configuración del exploit
 ![b6dc36363445f3ff2cbb87ed089db96b.png](img/b6dc36363445f3ff2cbb87ed089db96b.png)
 
 Vemos como nos aparece la opción target.
+
 ![b76d7b2fec2b6043070fc808c7de2dc4.png](img/b76d7b2fec2b6043070fc808c7de2dc4.png)
 
 Como vemos arriba la opción por defecto es Python, nosotros escogeremos la opción PSH que es la de PowerShell.
@@ -141,7 +147,7 @@ Como vemos arriba la opción por defecto es Python, nosotros escogeremos la opci
 Por lo que seleccionaremos el target 2. 
 ![6656370459a2c39b3ff6321bdbee52b7.png](img/6656370459a2c39b3ff6321bdbee52b7.png)
 
-COnfiguramos LHOST. 
+Configuramos LHOST. 
 ![0cdb9323d934455534fb3746057c3fee.png](img/0cdb9323d934455534fb3746057c3fee.png)
 
 Configuramos el payload con la reserse shell de meterpreter.
