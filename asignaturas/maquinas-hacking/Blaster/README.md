@@ -73,6 +73,7 @@ En el escritorio vemos un archivo hhupd. En THM nos dan un vieo con el que ejecu
 Video: https://www.youtube.com/watch?v=3BQKpPNlTSo
 
 Ejecutamos el script y le damos a "Show more details"
+
 ![a29b253216d064e5c470b785c20df612.png](img/a29b253216d064e5c470b785c20df612.png)
 
 Clickaremos en "Show info about teh publisher's certificate" 
