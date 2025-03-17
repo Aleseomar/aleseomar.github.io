@@ -25,16 +25,15 @@ Vemos varios post del usuario Wade.
  ![301af22f979b31acb8d76f4530b92d22.png](img/301af22f979b31acb8d76f4530b92d22.png)
  ![822ecd71516f4e8c22ae96c0ba6900ee.png](img/822ecd71516f4e8c22ae96c0ba6900ee.png)
  
- En los post recientes vemos un apartado de comentarios recientes. THM nos dice que ahí podemos encontrar información relevante. 
+ En los post recientes vemos un apartado de comentarios recientes. THM nos dice que ahí podemos encontrar información relevante.
  
  ![74e50a805646889259a40d55fb54f2f4.png](img/74e50a805646889259a40d55fb54f2f4.png)
  
- 
- Viendo el comentario podemos que habla que su usuario de sesión será Wade. 
+ Viendo el comentario podemos que habla que su usuario de sesión será Wade.
  ![d8d5f246bd57d1c8e8d91765b04bc409.png](img/d8d5f246bd57d1c8e8d91765b04bc409.png)
 
-Se responde a si mismo en un comentario donde deja la contraseña del usuario por su se le olvida. 
- 
+Se responde a si mismo en un comentario donde deja la contraseña del usuario por su se le olvida.
+
  ![45c940250f94a22b0e652ea7f1d6ad03.png](img/45c940250f94a22b0e652ea7f1d6ad03.png)
 
 Vamos a probar a conectarnos al sistema operativo a través de RDP ya que en el nmap vimos que estaba el puerto abierto. Probaremos a entrar con los credenciales que hemso encontrado.
@@ -42,15 +41,15 @@ Usaremos remmina para el RDP.
 
 ![feed11af0e51552995381f3a9adb6d93.png](img/feed11af0e51552995381f3a9adb6d93.png)
 
-Crearemos una nueva sesión con los datos que tenemos. 
+Crearemos una nueva sesión con los datos que tenemos.
 
 ![82db0be28bbf23b454f753f5b5ec3f45.png](img/82db0be28bbf23b454f753f5b5ec3f45.png)
 
-Y ya estamos dentro de la máquina. 
+Y ya estamos dentro de la máquina.
 
 ![88f48e772ad20887da6abb5e7c8bb485.png](img/88f48e772ad20887da6abb5e7c8bb485.png)
 
-Vemos que hay un archivo user.txt en el escritorio donde encontramos una flag. 
+Vemos que hay un archivo user.txt en el escritorio donde encontramos una flag.
 
 ![32c40b4554d857f7e7eeffbe39be8939.png](img/32c40b4554d857f7e7eeffbe39be8939.png)  
 
@@ -76,14 +75,14 @@ Ejecutamos el script y le damos a "Show more details"
 
 ![a29b253216d064e5c470b785c20df612.png](img/a29b253216d064e5c470b785c20df612.png)
 
-Clickaremos en "Show info about teh publisher's certificate" 
+Clickaremos en "Show info about teh publisher's certificate"
 
 ![9cbfea0e7f1fe388df04c286cc0d5c2d.png](img/9cbfea0e7f1fe388df04c286cc0d5c2d.png)
 
-Nos carga el certificado y le damos al enlace que nos aparece en Issued by. 
+Nos carga el certificado y le damos al enlace que nos aparece en Issued by.
 ![da019aaf98df1815520e64391e892ce0.png](img/da019aaf98df1815520e64391e892ce0.png)
 
-Al pinchar nos abre explorer una página pero no nos carga. 
+Al pinchar nos abre explorer una página pero no nos carga.
 
 ![49d31c4b0576b826dd85a1f981946471.png](img/49d31c4b0576b826dd85a1f981946471.png)
 
@@ -101,7 +100,7 @@ Aquí podemos verla
 
 ![e3a1717c9279dad5d9dc3edb0bf8602a.png](img/e3a1717c9279dad5d9dc3edb0bf8602a.png)
 
-Le daremos click y lo abriremos con la terminal. 
+Le daremos click y lo abriremos con la terminal.
 
 ![bcfbef7d2934a1293b343b84f195d7f8.png](img/bcfbef7d2934a1293b343b84f195d7f8.png)
 
@@ -125,7 +124,7 @@ Vemos el contenido del fichero para encontrar la flag.
 
 Flag: THM{COIN_OPERATED_EXPLOITATION}
 
-Nos dicen que no cerremos la sesión de la consola. Nos proporcionan el siguiente exploit `exploit/multi/script/web_delivery`, así que lo buscaremos en metaexploit. 
+Nos dicen que no cerremos la sesión de la consola. Nos proporcionan el siguiente exploit `exploit/multi/script/web_delivery`, así que lo buscaremos en metaexploit.
 
 ![747c3d35d66cd4ccac0401ab984818da.png](img/747c3d35d66cd4ccac0401ab984818da.png)
 
@@ -145,10 +144,10 @@ Como vemos arriba la opción por defecto es Python, nosotros escogeremos la opci
 
 ![bf4c143f6da7b2a5df69000ec76b7511.png](img/bf4c143f6da7b2a5df69000ec76b7511.png)
 
-Por lo que seleccionaremos el target 2. 
+Por lo que seleccionaremos el target 2.
 ![6656370459a2c39b3ff6321bdbee52b7.png](img/6656370459a2c39b3ff6321bdbee52b7.png)
 
-Configuramos LHOST. 
+Configuramos LHOST.
 ![0cdb9323d934455534fb3746057c3fee.png](img/0cdb9323d934455534fb3746057c3fee.png)
 
 Configuramos el payload con la reserse shell de meterpreter.
