@@ -128,6 +128,14 @@ Nos damos permisos
 
 ![cd99b79b3aa4851e29c190187a31e181.png](img/cd99b79b3aa4851e29c190187a31e181.png)
 
-Y encontramos la flag
+Y encontramos la contraseña del root
 
 ![6612d8a0aee78aeb053daa2e836b6215.png](img/6612d8a0aee78aeb053daa2e836b6215.png)
+
+Ahora nos conectamos con la cuenta de Administrator
+
+![alt text](img/image2.png)
+
+Nos sale el root.txt
+
+![alt text](img/image.png)
