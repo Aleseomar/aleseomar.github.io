@@ -33,7 +33,8 @@ Podemos ver información como SO, nombre del equipo, grupo de trabajo...
  Al mirar dentro del fichero no nos deje ejecutar cat, por lo que tenemos que llevarnos el fichero a nuestra máquina. 
  ![9a74d681ef0a75356f524a95373b0e7d.png](img/9a74d681ef0a75356f524a95373b0e7d.png)
 
- Nos aparece lo siguiente, por lo que parece que esta encriptada. 
+ Nos aparece lo siguiente, por lo que parece que esta encriptada.
+
  ![ba792ee1a87f70d4cc5cd36accbcd904.png](img/ba792ee1a87f70d4cc5cd36accbcd904.png)
 
  Parece por el formato que es base 64 por lo que vamos a desencriptarla:
@@ -74,6 +75,7 @@ He probado payload con exe y con asp pero ninguno de los dos me ha funcionado. B
 ![c59c44608b7a576c228f7a5e57ca646e.png](img/c59c44608b7a576c228f7a5e57ca646e.png)
 
 Para que el payload se ejecute tendremos que ejecutarlo de alguna forma o interactuar con el. Le haremos un curl siguiento la URL 
+
 ![b8695950251cba2bec49cc82078ab1a2.png](img/b8695950251cba2bec49cc82078ab1a2.png)
 
 Y en el netcat se nos abre la cmd. Ya estamos dentro del sistema. 
@@ -96,7 +98,8 @@ Comprobaremos el contenido de user.txt y encontramos la flag del usuario.
 Ahora queremos escalar privilegios, tras hacerle consultas a perplexity buscando posibles exploit con la versión del SO nos dió esta solución. 
 ![02c520695d3bd879a6f9bbb280eff85b.png](img/02c520695d3bd879a6f9bbb280eff85b.png)
 
-Esto lo que nos permite es ver los permisos que tenemos en el sistema y depende de que tengamos habilitado podemos usar algún exploit. 
+Esto lo que nos permite es ver los permisos que tenemos en el sistema y depende de que tengamos habilitado podemos usar algún exploit.
+
 ![1a4d180de132e4bc3bc99706f383a6ba.png](img/1a4d180de132e4bc3bc99706f383a6ba.png)
 
 Una vez le he dado la salida nos aconseja que el privilegio para hacer la escala de privilegios es SeImpersonatePrivilege, ya que este permite a un proceso impersonar a un cliente después de la autenticación, lo que puede ser explotado para obtener privilegios de sistema.
@@ -112,7 +115,8 @@ Descargaremos el exploit de este repositorio
 ![97f75e253ab7b194400d67bb53d064bb.png](img/97f75e253ab7b194400d67bb53d064bb.png)
 ![ed7a56b14e6f3a220759717ef28e0f29.png](img/ed7a56b14e6f3a220759717ef28e0f29.png)
 
-Abrimos un servidor con python 
+Abrimos un servidor con python
+
 ![2961954dc9aba6df5df320e1b614f6d1.png](img/2961954dc9aba6df5df320e1b614f6d1.png)
 
 Y con este comando que nos ha dado perplexity descargaremos el .exe de nuestro servidor. 
@@ -136,7 +140,8 @@ Efectivamente somos el sistema y tenemos permisos de administrador
 Vamos a buscar la flag en el directorio del administrador. Dentro del escritorio del root encontramos el archivo root.txt
 ![5771c53c32fe7d79bbdb50bc181bd687.png](img/5771c53c32fe7d79bbdb50bc181bd687.png)
 
-Vemos su conteniod y encontramos la flag. 
+Vemos su conteniod y encontramos la flag.
+
 ![0a225de4dad6c652682dc2059d846ef1.png](img/0a225de4dad6c652682dc2059d846ef1.png)
 
 
