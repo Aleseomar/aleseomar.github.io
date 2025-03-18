@@ -42,6 +42,7 @@ THM{L0L_WH0_US3S_M3T4}
 Vamos a mirar todos los codigos de las páginas por si encontramos alguna otra flag:
 
 En el segundo blog podemos ver en el código una flag que la verdad esta bastante escondida. Le pase el codigo al chat y me detecto la flag. 
+
 ![cc384e07097e610e8f25fc149c8f4e55.png](img/cc384e07097e610e8f25fc149c8f4e55.png)
 
 THM{AN0TH3R_M3TA}
@@ -74,9 +75,11 @@ Si accedemos a /umbraco/ nos redirige a lo que parece un login del cms:
 Para el login nos pide usuario o correo y contraseña. La contraseña creemos que es la que salia en robots el usuario tendremos que buscar por la web a ver si hay alguna pista. 
 
 Encontramos en un post este correo: 
+
 ![23f7f550748f4e01fda2fafeaeb481dd.png](img/23f7f550748f4e01fda2fafeaeb481dd.png)
 
 Nos da error. 
+
 ![4a8362b5de27c2e628f84a9b6a8da690.png](img/4a8362b5de27c2e628f84a9b6a8da690.png)
 
 No encuentro nada de ningún correo y he buscado información preguntadole a chat. Me dice que hay concordancia entre el correo que he encontrado y el usuario que ha subido el post. 
@@ -122,7 +125,9 @@ Somos el usuario SG por loq ue vamos a darnos permiso.
 ![fb367fb81f32f5e2f355da2d5c98da23.png](img/fb367fb81f32f5e2f355da2d5c98da23.png)
 
 Nos damos permisos 
+
 ![cd99b79b3aa4851e29c190187a31e181.png](img/cd99b79b3aa4851e29c190187a31e181.png)
 
 Y encontramos la flag
+
 ![6612d8a0aee78aeb053daa2e836b6215.png](img/6612d8a0aee78aeb053daa2e836b6215.png)
