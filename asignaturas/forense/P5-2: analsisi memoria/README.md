@@ -1,0 +1,1 @@
+# Informe de Análisis de Memoria RAM
