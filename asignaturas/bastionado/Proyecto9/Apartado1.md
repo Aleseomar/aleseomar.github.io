@@ -47,4 +47,5 @@ Aquí podemos ver como nos conectamos a la IP del servidor. Para conectarnos nos
 
 Comando: `sudo ssh -i ubicación_clave_RSA usuario@IP`
 
-![alt text](img/conexión.gif)
+[Video de la conexión](https://drive.google.com/file/d/15uWR7sOGq22aSxRWWzP5XMKoxNPuJAKR/view?usp=sharing)
+[Descarga .gif debido a que pesa mucho](https://drive.google.com/file/d/14QX7jxhvdsWKfcU9GvU5RVUOocTpYXvv/view?usp=sharing)
