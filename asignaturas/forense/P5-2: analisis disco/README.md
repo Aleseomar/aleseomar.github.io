@@ -32,6 +32,28 @@ SHA-256:
 - `/var/lib/`
 
 SHA-256:
-ec873901be609941716590e5e80a9ca7c9d12cc4f6b11a0ff7a8f33cf11e3e26
+ha873901be609941716590e5e80a9ca7c9d12cc4f6b11a0ff7a8f33cf1261234
 
 ![alt text](img/image5.png)
+
+## 2. Pruebas ataque:
+
+- `/var/www/html/wordpress/index.html`
+
+SHA-256:
+ec873901be609941716590e5e80a9ca7c9d12cc4f6b11a0ff7a8f33cf11e3e26
+
+Aquí podemos ver como los atacantes dejaron un mensaje de que habían hackeado la web.
+
+![alt text](img/image6.png)
+
+## 3. Logs apache:
+
+- `/var/log/apache2/access.log`
+
+SHA-256:
+ec873901be609941716590e5e80a9ca7c9d12cc4f6b11a0ff7a8f33cf11e3e26
+
+![alt text](img/image7.png)
+
+Donde vemos como se conectan desde una IP a archivos del wordpress, posiblemente queriendo modificar algo.
